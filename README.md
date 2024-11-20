@@ -2,6 +2,9 @@
 
 DevMonk is an automated penetration testing tool designed to test websites for XSS (Cross-Site Scripting) vulnerabilities. It allows security researchers to inject payloads into input fields and test their effectiveness, saving time and effort in manual testing.
 
+## Demo 🎥
+![DevMonk Demo](assets/devmonk.gif)
+
 ---
 
 ## Features 🚀
