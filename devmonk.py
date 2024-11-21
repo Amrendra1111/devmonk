@@ -99,6 +99,9 @@ def main():
     # Prompt for the target URL
     target_url = input("Enter the target URL (e.g., https://example.com): ")
 
+    # Ask if the user wants to check for login fields
+    check_login = input("Do you want to check for login fields? (y/n): ")
+
     # Initialize the browser (using Firefox)
     driver = webdriver.Firefox()
 
@@ -109,8 +112,9 @@ def main():
         driver.get(target_url)
         time.sleep(2)  # Wait for the page to load
 
-        # Check if login is required
-        wait_for_login(driver)
+        # Check if login is required based on user input
+        if check_login.lower() == 'y':
+            wait_for_login(driver)
 
         # Wait for user to target an input field
         target_element = wait_for_user_target(driver)
@@ -122,4 +126,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
